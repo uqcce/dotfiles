@@ -1,0 +1,26 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "type": "small",
+    "color": {
+      "1": "38;2;42;232;138",
+      "2": "38;2;42;232;138"
+    }
+  },
+  "display": {
+    "color": {
+      "keys": "38;2;42;232;138",
+      "title": "38;2;42;232;138"
+    }
+  },
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "kernel",
+    "uptime",
+    "packages",
+    "terminal",
+    "break"
+  ]
+}

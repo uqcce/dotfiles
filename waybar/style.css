@@ -1,0 +1,90 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.85);
+    color: #4aaa6a;
+    border: none;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    margin: 4px 2px;
+    background: transparent;
+    color: #4aaa6a;
+    border: 2px solid transparent;
+}
+
+#workspaces button.active {
+    background: #2ae88a;
+    color: #000000;
+    border-color: #2ae88a;
+}
+
+#workspaces button:hover {
+    border-color: #2ae88a;
+}
+
+#workspaces button.urgent {
+    background: #6affaa;
+    color: #000000;
+}
+
+#layout {
+    padding: 0 10px;
+    color: #2ae88a;
+    font-size: 12px;
+}
+
+#bluetooth,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#battery,
+#clock,
+#tray {
+    padding: 0 10px;
+    margin: 4px 2px;
+    background: transparent;
+    color: #4aaa6a;
+}
+
+#bluetooth.connected,
+#network.wifi,
+#network.ethernet {
+    color: #6affaa;
+}
+
+#pulseaudio.muted {
+    color: #6affaa;
+}
+
+#cpu.high,
+#memory.high {
+    color: #6affaa;
+}
+
+#battery.charging {
+    color: #2ae88a;
+}
+
+#battery.warning:not(.charging) {
+    color: #6affaa;
+}
+
+#battery.critical:not(.charging) {
+    color: #2ae88a;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    to {
+        color: #000000;
+    }
+}

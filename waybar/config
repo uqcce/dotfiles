@@ -1,0 +1,89 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 8,
+    "margin-top": 6,
+    "margin-left": 8,
+    "margin-right": 8,
+    "modules-left": ["mango/workspaces", "mango/layout"],
+    "modules-center": [],
+    "modules-right": [
+        "bluetooth",
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        "battery",
+        "clock",
+        "tray"
+    ],
+
+    "mango/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "ignore-hidden": true,
+        "format-icons": {
+            "1": "1", "2": "2", "3": "3", "4": "4", "5": "5",
+            "6": "6", "7": "7", "8": "8", "9": "9", "10": "0"
+        }
+    },
+
+    "mango/layout": {
+        "format": "{}"
+    },
+
+    "bluetooth": {
+        "format": "󰂯 {status}",
+        "format-disabled": "󰂲",
+        "format-connected": "󰂯 {num_connections}",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "blueman-manager"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 mute",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "network": {
+        "format-wifi": "󰤨 {essid}",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnected": "󰤭 offline",
+        "tooltip-format": "{ifname} via {gwaddr}"
+    },
+
+    "cpu": {
+        "format": "󰻠 {usage}%",
+        "interval": 5,
+        "on-click": "kitty -e btop"
+    },
+
+    "memory": {
+        "format": "󰍛 {percentage}%",
+        "interval": 5,
+        "on-click": "kitty -e btop"
+    },
+
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "clock": {
+        "format": "󰃭 {:%d.%m %H:%M}",
+        "tooltip-format": "{:%A, %d %B %Y}"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+}
